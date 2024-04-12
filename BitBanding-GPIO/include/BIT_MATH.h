@@ -20,7 +20,7 @@
 #define SET_BIT(VAR,BIT)  BITBAND_PERI((u32*)(&(VAR)), BIT)=0x1
 #define CLR_BIT(VAR,BIT)  BITBAND_PERI((u32*)(&(VAR)), BIT)=0x0
 #define GET_BIT(VAR,BIT)	BITBAND_PERI((u32*)(&(VAR)), BIT)
-#define TOG_BIT(VAR,BIT) 	BITBAND_PERI((u32*)(&(VAR)), BIT) =^BITBAND_PERI((u32*)(&(VAR)), BIT)
+#define TOG_BIT(VAR,BIT) 	BITBAND_PERI((u32*)(&(VAR)), BIT) ^= 1U
 
 
 
