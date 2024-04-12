@@ -17,8 +17,8 @@
 #define BITBAND_PERI(a,b) *((u32*)((  ALIAS_PERI_BASE + ((u32)a-BITBAND_PERI_BASE)*32 + (b*4))))
 
 // Bit manipulation macros
-#define SET_BIT(VAR,BIT)    BITBAND_PERI((u32*)(&(VAR)), BIT)=0x1
-#define CLR_BIT(VAR,BIT)    BITBAND_PERI((u32*)(&(VAR)), BIT)=0x0
+#define SET_BIT(VAR,BIT)  BITBAND_PERI((u32*)(&(VAR)), BIT)=0x1
+#define CLR_BIT(VAR,BIT)  BITBAND_PERI((u32*)(&(VAR)), BIT)=0x0
 #define GET_BIT(VAR,BIT)	BITBAND_PERI((u32*)(&(VAR)), BIT)
 #define TOG_BIT(VAR,BIT) 	BITBAND_PERI((u32*)(&(VAR)), BIT) =^BITBAND_PERI((u32*)(&(VAR)), BIT)
 
